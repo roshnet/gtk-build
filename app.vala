@@ -7,12 +7,16 @@ public class Test : Gtk.Application {
         );
     }
 
-    protected override void activate () {
+    public void build_window () {
         Gtk.Window window = new Gtk.ApplicationWindow (this);
         window.title = "Vala Application";
         window.window_position = Gtk.WindowPosition.CENTER;
         window.set_default_size (350, 100);
         window.show_all ();
+    }
+
+    protected override void activate () {
+        this.build_window();
     }
 
     public static int main (string[] args) {
