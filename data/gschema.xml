@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema path="/com/github/roshnet/jarvis/" id="com.github.roshnet.jarvis">
+        <key name="pos-x" type="i">
+            <default>360</default>
+            <summary>Horizontal Position</summary>
+            <description>The saved horizontal position of our window</description>
+        </key>
+        <key name="pos-y" type="i">
+            <default>360</default>
+            <summary>Vertical Position</summary>
+            <description>The saved vertical position of our window</description>
+        </key>
+        <key name="window-width" type="i">
+            <default>600</default>
+            <summary>Window Width</summary>
+            <description>The saved width of our window</description>
+        </key>
+        <key name="window-height" type="i">
+            <default>400</default>
+            <summary>Window Height</summary>
+            <description>The saved height of our window</description>
+        </key>
+    </schema>
+</schemalist>

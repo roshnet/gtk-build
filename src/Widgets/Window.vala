@@ -9,6 +9,9 @@ public class Jarvis.Window : Gtk.ApplicationWindow {
         title = "Vala Application";
         window_position = Gtk.WindowPosition.CENTER;
         set_default_size (350, 100);
+
+        var settings = new GLib.Settings("com.github.roshnet.jarvis");
+        move (settings.get_int("pos-x"), settings.get_int("pos-y"));
         show_all ();
     }
 }
