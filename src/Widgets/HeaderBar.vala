@@ -1,4 +1,13 @@
 public class Jarvis.HeaderBar : Gtk.HeaderBar { 
+
+    public Jarvis.Window main_window { get; construct; }
+
+    public HeaderBar (Jarvis.Window  window) {
+        Object (
+            main_window: window
+        );
+    }
+
     construct {
 
         set_title ("Jarvis");
@@ -22,17 +31,7 @@ public class Jarvis.HeaderBar : Gtk.HeaderBar {
         menu_button.valign = Gtk.Align.CENTER;
 
         var stack_switcher = new Gtk.StackSwitcher ();
-        var stack = new Gtk.Stack ();
-        stack_switcher.stack = stack;
-
-        var outstanding = new Gtk.Grid ();
-        outstanding.add (new Gtk.Label ("Outstanding Page"));
-
-        var completed = new Gtk.Grid ();
-        completed.add (new Gtk.Label ("Completed Page"));
-
-        stack.add_titled (outstanding, "outstanding", "Outstanding");
-        stack.add_titled (completed, "completed", "Completed");
+        stack_switcher.stack = main_window.stack;
 
         set_custom_title (stack_switcher);
 
